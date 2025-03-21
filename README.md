@@ -1,56 +1,115 @@
-# CC3K
+# CC3K 🎮
 
-C++ dungeon crawler game.
+<div align="center">
 
-● First run make command
+[![C++](https://img.shields.io/badge/C++-17-blue.svg)](https://isocpp.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-● Run ./cc3k (you can add the name of a file that specifies the layout of each of the
-5 floors <- this is optional)
+A text-based dungeon crawler roguelike game written in C++. Navigate through 5 floors of procedurally generated dungeons, battle enemies, collect treasures, and try to reach the final floor!
 
-● Specify the race you want to play as: ‘s’ for shade, ‘d’ for drow, ‘v’ for vampire, ‘g’
-for goblin, ‘t’ for troll. If any other character is given, race will default to shade.
+</div>
 
-● At this point, you should see a board rendered, where potions are represented
-with ‘P’, gold represented with ‘G’, your character represented by ‘@’, dragon
-horde also represented by ‘G’ but has a dragon (‘D’) next to it, the stairs
-represented by ‘/’, and the remaining letters just represent the various enemies in
-the game. See below for example:
+## 🎯 Features
 
-![Alt text](/ExampleScenario.png?raw=true "Example")
+- **Multiple Playable Races**
+  - Shade (default)
+  - Drow
+  - Vampire
+  - Goblin
+  - Troll
 
-● You should be able to navigate through the board using the following commands:
-‘no’, ‘ne’, ‘ea’, ‘so’, ‘se’, ‘sw’, ‘we’, ‘nw’. (compass directions).
+- **Dynamic Gameplay**
+  - Procedurally generated dungeon floors
+  - Enemy AI with random movement
+  - Combat system with race-specific interactions
+  - Potion and treasure collection
+  - Stats management (HP, ATK, DEF)
 
-● You can walk over gold and see your gold stat adjust accordingly.
+- **Game Controls**
+  - Movement: `no`, `ne`, `ea`, `so`, `se`, `sw`, `we`, `nw` (compass directions)
+  - Combat: `a` + direction
+  - Use Potion: `u` + direction
+  - Toggle Enemy Movement: `f`
+  - Quit Game: `q`
+  - Restart Game: `r`
 
-● You can walk through hallways to navigate between chambers, but you cannot
-walk through walls.
+## 🚀 Getting Started
 
-● You can use potions using the command ‘u’ followed by the direction the potion is
-relative to you (must be within one block radius of you). You will see your stats
-adjust accordingly. Also notice that health does not drop below 0, and does not
-go above the starting hp (expectation is vampires, where they have no max hp).
-Additionally, notice that atk and def also do not drop below 0, and that they are
-reset to their default values after reaching a new floor.
+### Prerequisites
 
-● You can fight enemies by using the command ‘a’ followed by the direction the
-enemy is relative to you (must be within one block radius of you). You will see
-your health and gold adjust accordingly based on the outcome of the combat.
+- C++ compiler (g++ recommended)
+- Make
 
-● There are also various special interactions between certain enemies and
-playable characters which are all implemented as outlined in the assignment
-instructions.
+### Installation
 
-● You should make your way to the stairs(‘/’), in order to get to the second floor,
-where you will see that a new board is generated, and you spawn in a random
-location once again.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/chamber-crawler.git
+```
 
-● Keep making your way till you get to the end of the 5th floor, and access the
-stairs there, in which the game ends with a victory and your score is displayed.
+2. Build the project
+```bash
+make
+```
 
-● Also, you can press ‘f’ at any time in order to stop the enemy random movement
-(note that they will still attack you if you get close to them).
+3. Run the game
+```bash
+./cc3k [layout_file]
+```
+> Note: The layout file is optional. If not provided, the game will use default layouts.
 
-● Additionally, ‘q’ can be used to quit the game at any time, and ‘r’ can be used to
-restart the game.
+## 🎮 How to Play
 
+1. Choose your race:
+   - `s` - Shade
+   - `d` - Drow
+   - `v` - Vampire
+   - `g` - Goblin
+   - `t` - Troll
+   - Any other character defaults to Shade
+
+2. Navigate through the dungeon:
+   - Use compass directions to move
+   - Collect gold (`G`) and potions (`P`)
+   - Battle enemies (various letters represent different enemies)
+   - Find stairs (`/`) to progress to the next floor
+
+3. Combat and Items:
+   - Use potions with `u` + direction
+   - Attack enemies with `a` + direction
+   - Each race has unique interactions with different enemies
+   - Stats reset when reaching a new floor
+
+4. Win Condition:
+   - Reach and use the stairs on the 5th floor
+   - Your final score will be displayed
+
+## 🎨 Game Elements
+
+- `@` - Player character
+- `G` - Gold
+- `P` - Potion
+- `D` - Dragon
+- `/` - Stairs
+- Various letters represent different enemies
+
+## 🛠️ Technical Details
+
+- Written in C++17
+- Object-oriented design with inheritance
+- Procedural dungeon generation
+- Event-driven architecture
+
+## 🤝 Contributing
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+<div align="center">
+  Made with ❤️ by Omar Elserwi
+</div>
